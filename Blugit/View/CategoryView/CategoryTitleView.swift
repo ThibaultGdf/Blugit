@@ -11,7 +11,7 @@ struct CategoryTitleView: View {
     var body: some View {
         ZStack{
             
-            LinearGradient(gradient: Gradient(colors: [.white, .gray]),
+            LinearGradient(gradient: Gradient(colors: [.darkBlue, .mediumBlue]),
                            startPoint: .top, endPoint: .bottom)
             .frame(width: 320, height: 120)
             .cornerRadius(10)

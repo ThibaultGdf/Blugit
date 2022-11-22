@@ -15,6 +15,7 @@ struct HomeGameView: View {
                     .resizable()
                     .cornerRadius(10)
                     .frame(width: 350, height: 200)
+                    
             }
            
         }

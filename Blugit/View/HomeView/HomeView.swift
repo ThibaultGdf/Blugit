@@ -19,6 +19,7 @@ struct HomeView: View {
                 HomeToolBarView()
                 Spacer()
                 HomeGameView()
+                    .shadow(radius: 8, x: 15, y: 15)
                 Spacer()
                 HomeCategoryView()
                 Spacer()

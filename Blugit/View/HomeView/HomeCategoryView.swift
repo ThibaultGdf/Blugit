@@ -10,22 +10,28 @@ import SwiftUI
 struct HomeCategoryView: View {
     var body: some View {
         
-        ScrollView(.horizontal) {
+        ScrollView(.horizontal, showsIndicators: false) {
             
             HStack(spacing: 20) {
                 
                 ForEach(categorieslide, id: \.self) { category in
                     NavigationLink( destination: CategoriesView(),
                                     label : {
-                        Text(category)
                         
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 160, height: 90)
+                                .foregroundColor(.mediumBlue)
+                            
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 155, height: 85)
+                                .foregroundColor(.white)
+                            Text(category)
                             .fontWeight(.heavy)
-                            .foregroundColor(.lightBlue)
-                            .frame(width: 150, height: 80)
-                            .background(.white)
-                            .cornerRadius(10)
+                            .foregroundColor(.mediumBlue)
                             .padding(.horizontal)
-                        
+                            
+                        }
                     })
                 }
             

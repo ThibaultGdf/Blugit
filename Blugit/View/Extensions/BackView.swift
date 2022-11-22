@@ -10,7 +10,7 @@ import SwiftUI
 struct BackView : View {
     var body: some View {
         
-        LinearGradient(gradient: Gradient(colors: [.white, .lightBlue]),
+        LinearGradient(gradient: Gradient(colors: [.lightBlue, .darkBlue]),
                        startPoint: .top, endPoint: .bottom)
         
         .ignoresSafeArea(edges: .top)
