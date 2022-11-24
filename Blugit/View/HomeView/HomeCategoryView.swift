@@ -14,8 +14,8 @@ struct HomeCategoryView: View {
             
             HStack(spacing: 20) {
                 
-                ForEach(categorieslide, id: \.self) { category in
-                    NavigationLink( destination: CategoriesView(),
+                ForEach(GameGenre.allCases, id: \.self) { genre in
+                    NavigationLink( destination: CategoriesView(gameGenre: genre),
                                     label : {
                         
                         ZStack{
@@ -26,7 +26,7 @@ struct HomeCategoryView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 155, height: 85)
                                 .foregroundColor(.white)
-                            Text(category)
+                            Text(genre.rawValue)
                             .fontWeight(.heavy)
                             .foregroundColor(.mediumBlue)
                             .padding(.horizontal)

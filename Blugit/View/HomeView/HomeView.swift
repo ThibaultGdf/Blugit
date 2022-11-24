@@ -11,21 +11,20 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             VStack {
-                
-         
-        ZStack{
-            BackView()
-            VStack{
-                HomeToolBarView()
-                Spacer()
-                HomeGameView()
-                    .shadow(radius: 8, x: 15, y: 15)
-                Spacer()
-                HomeCategoryView()
-                Spacer()
-                Spacer()
-            }
-            }
+                ZStack{
+                    BackView()
+                    VStack{
+                        HomeToolBarView()
+                        Spacer()
+                        HomeGameView()
+                            .ignoresSafeArea()
+                            .shadow(radius: 8, x: 15, y: 15)
+                        Spacer()
+                        HomeCategoryView()
+                        Spacer()
+                        Spacer()
+                    }
+                }
             }
         }
     }

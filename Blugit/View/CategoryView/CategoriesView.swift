@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct CategoriesView: View {
+    var gameGenre : GameGenre
     var body: some View {
         ZStack{
             BackView()
             VStack{
-                CategoryTitleView()
+                CategoryTitleView(gameGenre: gameGenre)
                 CategoryGeometryReaderView()
             } .padding(.bottom, 10)
         }
@@ -21,6 +22,6 @@ struct CategoriesView: View {
 
 struct CategoriesView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoriesView()
+        CategoriesView(gameGenre: .action)
     }
 }

@@ -14,7 +14,7 @@ struct FavorisView: View {
             VStack{
                 FavorisTitleView()
                 FavorisScrollView()
-            }
+            } .padding(.bottom, 10)
     }
     }
 }

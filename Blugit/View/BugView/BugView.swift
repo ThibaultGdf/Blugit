@@ -14,33 +14,9 @@ struct BugView: View {
             
             VStack {
                 
-                ZStack{
+                BugTitleView()
+                BugUserView()
                 
-                    RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.white)
-                        .frame(width: 315, height: 295)
-                    
-                    Image("DOFUS2")
-                        .resizable()
-                        .cornerRadius(10)
-                        .frame(width: 300, height: 280)
-                    
-                }
-          
-                GeometryReader { parentProxy in
-                    
-                    ScrollView {
-                      
-                        VStack(spacing: 40) {
-                            ForEach(bugs) { bug in
-                                
-                                BugImageView(parent: parentProxy, commentaire: bug)
-                               
-                            }
-                            .padding(.horizontal)
-                        }
-                    }
-                }
             }
         }
     }

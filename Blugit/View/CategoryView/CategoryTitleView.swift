@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CategoryTitleView: View {
+    var gameGenre : GameGenre
     var body: some View {
         ZStack{
             
@@ -16,7 +17,7 @@ struct CategoryTitleView: View {
             .frame(width: 320, height: 120)
             .cornerRadius(10)
             
-            Text("AVENTURE")
+            Text(gameGenre.rawValue.uppercased())
                 .font(.system(size: 40))
                 .fontWeight(.heavy)
                 .foregroundColor(Color.white)
@@ -27,6 +28,6 @@ struct CategoryTitleView: View {
 
 struct CategoryTitleView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryTitleView()
+        CategoryTitleView(gameGenre: .action)
     }
 }
